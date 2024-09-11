@@ -24,9 +24,24 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 50px;
     background-color: #080808;
     color: white;
+}
+
+.logo{
+    height: 50px;
+    width: 100px;
+}
+
+.logo > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-navbar > i{
+    display: none;
 }
 
 header nav ul {
@@ -277,4 +292,93 @@ footer {
 footer p{
     padding: 2vw;
    
+}
+
+
+/* responsive pages */
+
+@media (max-width: 600px) {
+
+    /* navbar */  
+
+
+    .container-navbar{
+        padding: 20px;
+    }
+
+    .container-navbar > i{
+        display: initial;
+        font-size: 25px;
+    }
+
+    .container-navbar > nav > ul > li{
+        display: none;
+    }
+
+    .container-navbar > a {
+        display: none;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Home page */
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Shop page */
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* About Page */
+
+
+    .container > h2 {
+        color: white;
+        font-size: 4vw;
+        margin-top: 20px;
+       
+    }
+    
+    .container > p{
+        color: white;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .our-mission .mission-content {
+        flex-direction: column;
+    }
+    
+
+    .mission-text > p{
+        color: white;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .mission-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-top: 50px;
+    }
+
+    /* contact page */
+
+    .contact form {
+        width: 80%;
+    }
 }
